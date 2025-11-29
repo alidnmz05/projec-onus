@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPlus, FaEdit, FaTrash, FaImage, FaSave, FaTimes } from 'react-icons/fa';
+import { FaPlus, FaEdit, FaTrash, FaSave, FaTimes } from 'react-icons/fa';
 
 const AdminProjects = () => {
   const [projects, setProjects] = useState([
