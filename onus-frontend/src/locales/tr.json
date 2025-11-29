@@ -1,0 +1,271 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "projects": "Projeler",
+    "about": "Hakkımızda",
+    "blog": "Blog",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title1": "Mutfak & Banyo",
+    "subtitle1": "Uygulamaları",
+    "description1": "Modern tasarım ve fonksiyonelliğin buluştuğu, yaşam alanlarınıza şıklık ve konfor getiren özel çözümler sunuyor.",
+    "title2": "Özel Tasarım",
+    "subtitle2": "Mobilyalar",
+    "description2": "Hayallerinizdeki yaşam alanlarını gerçeğe dönüştüren, size özel tasarlanmış mobilya çözümleri.",
+    "title3": "Modern ve Şık",
+    "subtitle3": "Banyolar",
+    "description3": "Konfor ve estetiği bir araya getiren, hayalinizdeki banyoyu tasarlıyoruz.",
+    "exploreProjects": "Projelerimizi Keşfedin",
+    "contactUs": "İletişime Geçin"
+  },
+  "features": {
+    "whyOnus": "Neden ONUS?",
+    "subtitle": "Sektördeki deneyimimiz ve kalite anlayışımızla fark yaratıyoruz",
+    "customDesign": {
+      "title": "Özel Tasarım",
+      "description": "Size özel, benzersiz tasarımlar oluşturuyoruz. Her proje, müşterilerimizin hayallerini yansıtır."
+    },
+    "3dVisualization": {
+      "title": "3D Görselleştirme",
+      "description": "Projenizi gerçekleşmeden önce 3D olarak görün. Tüm detayları önceden planlayın."
+    },
+    "preciseMeasurement": {
+      "title": "Hassas Ölçüm",
+      "description": "Profesyonel ekibimizle mükemmel ölçüm ve montaj garantisi sunuyoruz."
+    },
+    "qualityGuarantee": {
+      "title": "Kalite Garantisi",
+      "description": "Yalnızca en kaliteli malzemeleri kullanıyor, işçilik garantisi veriyoruz."
+    },
+    "timelyDelivery": {
+      "title": "Zamanında Teslimat",
+      "description": "Belirlenen süre içinde projenizi teslim ediyor, zamanınıza değer veriyoruz."
+    },
+    "awardWinning": {
+      "title": "Ödüllü Projeler",
+      "description": "Sektörde tanınmış, ödüllü projelere imza atıyoruz."
+    }
+  },
+  "projects": {
+    "title": "Son",
+    "subtitle": "Projelerimiz",
+    "description": "Gerçekleştirdiğimiz projelerle yaşam alanlarını dönüştürüyoruz",
+    "viewAll": "Tüm Projeleri Görüntüle",
+    "viewDetails": "Detayları Gör",
+    "categories": {
+      "all": "Tümü",
+      "kitchen": "Mutfak",
+      "bathroom": "Banyo",
+      "furniture": "Mobilya",
+      "custom": "Özel Tasarım"
+    }
+  },
+  "statistics": {
+    "title": "Sayılarla",
+    "subtitle": "ONUS",
+    "description": "Yılların deneyimi ve başarılı projelerle güvenilir bir marka",
+    "completedProjects": "Tamamlanan Proje",
+    "happyClients": "Mutlu Müşteri",
+    "awards": "Ödül ve Sertifika",
+    "satisfaction": "Memnuniyet Oranı"
+  },
+  "testimonials": {
+    "title": "Müşteri Yorumları",
+    "subtitle": "Müşterilerimizin memnuniyeti bizim için en önemli başarı göstergesi",
+    "customer1": {
+      "name": "Ayşe Yılmaz",
+      "role": "Ev Sahibi",
+      "text": "ONUS ile çalışmak harikaydı. Mutfağımız tam olarak hayal ettiğimiz gibi oldu. Kaliteli malzeme ve mükemmel işçilik. Herkese tavsiye ediyorum!"
+    },
+    "customer2": {
+      "name": "Mehmet Demir",
+      "role": "İşletme Sahibi",
+      "text": "Ofisimiz için özel tasarım mobilya yaptırdık. Ekip son derece profesyonel, zamanında teslim ve bütçeye uygun. Sonuçtan çok memnunuz."
+    },
+    "customer3": {
+      "name": "Zeynep Kaya",
+      "role": "Mimar",
+      "text": "Müşterilerime güvenle ONUS'u öneriyorum. Tasarım anlayışları modern ve işlevsel. 3D görselleştirme hizmeti çok faydalı oldu."
+    },
+    "customer4": {
+      "name": "Can Özkan",
+      "role": "Ev Sahibi",
+      "text": "Banyomuzun dönüşümü inanılmazdı! Küçük bir alanı çok verimli kullandılar. Hem modern hem de fonksiyonel bir banyo elde ettik."
+    }
+  },
+  "cta": {
+    "title": "Hayalinizdeki Yaşam Alanını Birlikte Tasarlayalım",
+    "subtitle": "Ücretsiz keşif ve danışmanlık hizmeti için hemen iletişime geçin. Uzman ekibimiz size en uygun çözümleri sunmak için hazır.",
+    "getFreeQuote": "Ücretsiz Teklif Alın",
+    "callNow": "Hemen Arayın",
+    "freeSurvey": "Ücretsiz Keşif",
+    "3dVisualization": "3D Görselleştirme",
+    "certified": "Garanti Belgeli"
+  },
+  "footer": {
+    "description": "Modern tasarım ve fonksiyonelliğin buluştuğu, yaşam alanlarınıza şıklık ve konfor getiren özel çözümler.",
+    "quickLinks": "Hızlı Linkler",
+    "services": "Hizmetlerimiz",
+    "contact": "İletişim",
+    "kitchenDesign": "Mutfak Tasarımı",
+    "bathroomDesign": "Banyo Tasarımı",
+    "customFurniture": "Özel Mobilya",
+    "3dVisualization": "3D Görselleştirme",
+    "consulting": "Danışmanlık",
+    "address": "Doğanın Çırağı, Ahşabın Ustası\nİstanbul, Türkiye",
+    "copyright": "© {{year}} ONUS Mutfak & Banyo. Tüm hakları saklıdır.",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfUse": "Kullanım Koşulları"
+  },
+  "contact": {
+    "title": "İletişim",
+    "description": "Projeleriniz için bize ulaşın, size en uygun çözümleri sunalım",
+    "info": "İletişim Bilgileri",
+    "address": "Adres",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "whatsapp": "WhatsApp",
+    "sendMessage": "Hemen Mesaj Gönder",
+    "workingHours": "Çalışma Saatleri",
+    "weekdays": "Pazartesi - Cuma: 09:00 - 18:00",
+    "saturday": "Cumartesi: 10:00 - 16:00",
+    "sunday": "Pazar: Kapalı",
+    "form": {
+      "title": "Bize Mesaj Gönderin",
+      "name": "Adınız Soyadınız",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "subject": "Konu",
+      "message": "Mesajınız",
+      "send": "Mesaj Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Mesajınız Gönderildi!",
+      "required": "Tüm alanların doldurulması zorunludur",
+      "placeholder": {
+        "name": "İsim Soyisim",
+        "email": "ornek@email.com",
+        "phone": "0555 555 55 55",
+        "subject": "Mutfak Tasarımı",
+        "message": "Projeniz hakkında detaylı bilgi verin..."
+      }
+    }
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "description": "ONUS Mutfak & Banyo olarak, modern tasarım ve fonksiyonelliğin buluştuğu, yaşam alanlarınıza şıklık ve konfor getiren özel çözümler sunuyoruz.",
+    "content1": "\"Doğanın Çırağı, Ahşabın Ustası\" sloganımızla doğal malzemeleri en iyi şekilde işleyerek, size özel tasarımlar oluşturuyoruz. Her proje bizim için bir sanat eseridir.",
+    "content2": "Yılların deneyimi ve sektördeki uzmanlığımızla, hayalinizdeki yaşam alanlarını gerçeğe dönüştürüyoruz. Kaliteli malzeme, profesyonel ekip ve mükemmel işçilik garantisi sunuyoruz.",
+    "experience": "Yıllık Deneyim",
+    "values": {
+      "title": "Değerlerimiz",
+      "description": "Çalışmalarımızı şekillendiren temel değerlerimiz",
+      "quality": {
+        "title": "Kalite",
+        "description": "En yüksek kalite standartlarında çalışıyoruz"
+      },
+      "customerFocused": {
+        "title": "Müşteri Odaklı",
+        "description": "Müşterilerimizin memnuniyeti önceliğimiz"
+      },
+      "innovation": {
+        "title": "İnovasyon",
+        "description": "Yenilikçi tasarım ve çözümler sunuyoruz"
+      },
+      "passion": {
+        "title": "Tutku",
+        "description": "İşimizi tutkuyla yapıyor, detaylara önem veriyoruz"
+      }
+    },
+    "process": {
+      "title": "Çalışma Sürecimiz",
+      "description": "Profesyonel yaklaşımımız ile projelerinizi hayata geçiriyoruz",
+      "step1": {
+        "title": "Keşif ve Danışmanlık",
+        "description": "İhtiyaçlarınızı dinliyor, ücretsiz keşif yapıyoruz."
+      },
+      "step2": {
+        "title": "Tasarım ve 3D Görsel",
+        "description": "Size özel tasarım ve 3D görselleştirme sunuyoruz."
+      },
+      "step3": {
+        "title": "Üretim ve Montaj",
+        "description": "Profesyonel üretim ve kusursuz montaj ile teslim."
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Tasarım, trendler ve ipuçları hakkında yazılarımız",
+    "readMore": "Devamını Oku",
+    "categories": {
+      "kitchen": "Mutfak",
+      "bathroom": "Banyo",
+      "furniture": "Mobilya",
+      "design": "Tasarım",
+      "technology": "Teknoloji"
+    }
+  },
+  "admin": {
+    "title": "Admin Paneli",
+    "login": "Giriş Yap",
+    "logout": "Çıkış Yap",
+    "dashboard": "Dashboard",
+    "projects": "Projeler",
+    "blog": "Blog",
+    "gallery": "Galeri",
+    "customers": "Müşteriler",
+    "settings": "Ayarlar",
+    "languages": "Dil Yönetimi",
+    "username": "Kullanıcı Adı",
+    "password": "Şifre",
+    "loginSubtitle": "Sisteme giriş yapın",
+    "welcome": "Hoş geldiniz! İşte genel bakış...",
+    "stats": {
+      "totalProjects": "Toplam Proje",
+      "blogPosts": "Blog Yazısı",
+      "customers": "Müşteriler",
+      "totalViews": "Toplam Görüntülenme"
+    },
+    "recentProjects": "Son Projeler",
+    "recentActivities": "Son Aktiviteler",
+    "status": {
+      "inProgress": "Devam Ediyor",
+      "completed": "Tamamlandı",
+      "pending": "Beklemede",
+      "active": "Aktif",
+      "draft": "Taslak",
+      "published": "Yayında"
+    },
+    "actions": {
+      "add": "Ekle",
+      "edit": "Düzenle",
+      "delete": "Sil",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "approve": "Onayla",
+      "search": "Ara"
+    },
+    "form": {
+      "title": "Başlık",
+      "category": "Kategori",
+      "description": "Açıklama",
+      "content": "İçerik",
+      "image": "Resim URL",
+      "excerpt": "Özet",
+      "date": "Tarih"
+    },
+    "confirmDelete": "Silmek istediğinizden emin misiniz?"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata oluştu",
+    "success": "Başarılı",
+    "search": "Ara...",
+    "filter": "Filtrele",
+    "all": "Tümü",
+    "readMore": "Devamını Oku",
+    "learnMore": "Daha Fazla",
+    "viewAll": "Tümünü Gör"
+  }
+}

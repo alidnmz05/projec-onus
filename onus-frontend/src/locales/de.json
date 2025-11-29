@@ -1,0 +1,271 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "projects": "Projekte",
+    "about": "Über uns",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title1": "Küchen & Badezimmer",
+    "subtitle1": "Anwendungen",
+    "description1": "Spezielle Lösungen, die Eleganz und Komfort in Ihre Wohnräume bringen, wo modernes Design und Funktionalität aufeinandertreffen.",
+    "title2": "Maßgeschneidertes Design",
+    "subtitle2": "Möbel",
+    "description2": "Maßgeschneiderte Möbellösungen, die Ihre Traum-Wohnräume Wirklichkeit werden lassen.",
+    "title3": "Modern und Elegant",
+    "subtitle3": "Badezimmer",
+    "description3": "Wir gestalten Ihr Traumbadezimmer durch die Kombination von Komfort und Ästhetik.",
+    "exploreProjects": "Entdecken Sie unsere Projekte",
+    "contactUs": "Kontakt aufnehmen"
+  },
+  "features": {
+    "whyOnus": "Warum ONUS?",
+    "subtitle": "Wir machen den Unterschied mit unserer Branchenerfahrung und unserem Qualitätsansatz",
+    "customDesign": {
+      "title": "Maßgeschneidertes Design",
+      "description": "Wir schaffen einzigartige Designs, die auf Sie zugeschnitten sind. Jedes Projekt spiegelt die Träume unserer Kunden wider."
+    },
+    "3dVisualization": {
+      "title": "3D-Visualisierung",
+      "description": "Sehen Sie Ihr Projekt in 3D, bevor es realisiert wird. Planen Sie alle Details im Voraus."
+    },
+    "preciseMeasurement": {
+      "title": "Präzise Messung",
+      "description": "Wir garantieren perfekte Messung und Montage mit unserem professionellen Team."
+    },
+    "qualityGuarantee": {
+      "title": "Qualitätsgarantie",
+      "description": "Wir verwenden nur hochwertigste Materialien und bieten Handwerksgarantie."
+    },
+    "timelyDelivery": {
+      "title": "Pünktliche Lieferung",
+      "description": "Wir liefern Ihr Projekt pünktlich und schätzen Ihre Zeit."
+    },
+    "awardWinning": {
+      "title": "Preisgekrönte Projekte",
+      "description": "Wir liefern anerkannte, preisgekrönte Projekte in der Branche."
+    }
+  },
+  "projects": {
+    "title": "Neueste",
+    "subtitle": "Projekte",
+    "description": "Wohnräume mit unseren abgeschlossenen Projekten verwandeln",
+    "viewAll": "Alle Projekte anzeigen",
+    "viewDetails": "Details anzeigen",
+    "categories": {
+      "all": "Alle",
+      "kitchen": "Küche",
+      "bathroom": "Badezimmer",
+      "furniture": "Möbel",
+      "custom": "Maßgeschneidertes Design"
+    }
+  },
+  "statistics": {
+    "title": "ONUS",
+    "subtitle": "in Zahlen",
+    "description": "Eine vertrauenswürdige Marke mit jahrelanger Erfahrung und erfolgreichen Projekten",
+    "completedProjects": "Abgeschlossene Projekte",
+    "happyClients": "Zufriedene Kunden",
+    "awards": "Auszeichnungen & Zertifikate",
+    "satisfaction": "Zufriedenheitsrate"
+  },
+  "testimonials": {
+    "title": "Kundenbewertungen",
+    "subtitle": "Die Zufriedenheit unserer Kunden ist unser wichtigster Erfolgsindikator",
+    "customer1": {
+      "name": "Ayse Yilmaz",
+      "role": "Hausbesitzerin",
+      "text": "Die Zusammenarbeit mit ONUS war wunderbar. Unsere Küche wurde genau so, wie wir es uns vorgestellt haben. Hochwertige Materialien und hervorragende Handwerkskunst. Ich empfehle sie jedem!"
+    },
+    "customer2": {
+      "name": "Mehmet Demir",
+      "role": "Geschäftsinhaber",
+      "text": "Wir haben für unser Büro maßgefertigte Möbel anfertigen lassen. Das Team war sehr professionell, lieferte pünktlich und im Budget. Wir sind sehr zufrieden mit dem Ergebnis."
+    },
+    "customer3": {
+      "name": "Zeynep Kaya",
+      "role": "Architektin",
+      "text": "Ich empfehle ONUS meinen Kunden mit gutem Gewissen. Ihr Designansatz ist modern und funktional. Der 3D-Visualisierungsservice war sehr hilfreich."
+    },
+    "customer4": {
+      "name": "Can Ozkan",
+      "role": "Hausbesitzer",
+      "text": "Die Verwandlung unseres Badezimmers war unglaublich! Sie nutzten einen kleinen Raum sehr effizient. Wir haben ein Badezimmer bekommen, das sowohl modern als auch funktional ist."
+    }
+  },
+  "cta": {
+    "title": "Lassen Sie uns gemeinsam Ihren Traum-Wohnraum gestalten",
+    "subtitle": "Kontaktieren Sie uns jetzt für kostenlose Inspektion und Beratung. Unser Expertenteam ist bereit, Ihnen die am besten geeigneten Lösungen anzubieten.",
+    "getFreeQuote": "Kostenloses Angebot erhalten",
+    "callNow": "Jetzt anrufen",
+    "freeSurvey": "Kostenlose Inspektion",
+    "3dVisualization": "3D-Visualisierung",
+    "certified": "Zertifiziert"
+  },
+  "footer": {
+    "description": "Spezielle Lösungen, die Eleganz und Komfort in Ihre Wohnräume bringen, wo modernes Design und Funktionalität aufeinandertreffen.",
+    "quickLinks": "Schnelllinks",
+    "services": "Unsere Dienstleistungen",
+    "contact": "Kontakt",
+    "kitchenDesign": "Küchendesign",
+    "bathroomDesign": "Badezimmerdesign",
+    "customFurniture": "Maßgefertigte Möbel",
+    "3dVisualization": "3D-Visualisierung",
+    "consulting": "Beratung",
+    "address": "Lehrling der Natur, Meister des Holzes\nIstanbul, Türkei",
+    "copyright": "© {{year}} ONUS Küche & Bad. Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsOfUse": "Nutzungsbedingungen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Kontaktieren Sie uns für Ihre Projekte, lassen Sie uns Ihnen die am besten geeigneten Lösungen anbieten",
+    "info": "Kontaktinformationen",
+    "address": "Adresse",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "whatsapp": "WhatsApp",
+    "sendMessage": "Nachricht jetzt senden",
+    "workingHours": "Öffnungszeiten",
+    "weekdays": "Montag - Freitag: 09:00 - 18:00",
+    "saturday": "Samstag: 10:00 - 16:00",
+    "sunday": "Sonntag: Geschlossen",
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "name": "Ihr Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "subject": "Betreff",
+      "message": "Ihre Nachricht",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht gesendet!",
+      "required": "Alle Felder sind erforderlich",
+      "placeholder": {
+        "name": "Max Mustermann",
+        "email": "beispiel@email.com",
+        "phone": "555 555 5555",
+        "subject": "Küchendesign",
+        "message": "Geben Sie detaillierte Informationen zu Ihrem Projekt an..."
+      }
+    }
+  },
+  "about": {
+    "title": "Über uns",
+    "description": "Als ONUS Küchen & Badezimmer bieten wir spezielle Lösungen, die Eleganz und Komfort in Ihre Wohnräume bringen, wo modernes Design und Funktionalität aufeinandertreffen.",
+    "content1": "Mit unserem Slogan \"Lehrling der Natur, Meister des Holzes\" schaffen wir maßgeschneiderte Designs, indem wir natürliche Materialien auf die beste Weise verarbeiten. Jedes Projekt ist für uns ein Kunstwerk.",
+    "content2": "Mit jahrelanger Erfahrung und Expertise in der Branche verwandeln wir Ihre Traum-Wohnräume in Realität. Wir bieten hochwertige Materialien, ein professionelles Team und perfekte Handwerksgarantie.",
+    "experience": "Jahre Erfahrung",
+    "values": {
+      "title": "Unsere Werte",
+      "description": "Die Kernwerte, die unsere Arbeit prägen",
+      "quality": {
+        "title": "Qualität",
+        "description": "Wir arbeiten nach höchsten Qualitätsstandards"
+      },
+      "customerFocused": {
+        "title": "Kundenorientiert",
+        "description": "Die Zufriedenheit unserer Kunden hat Priorität"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Wir bieten innovative Designs und Lösungen"
+      },
+      "passion": {
+        "title": "Leidenschaft",
+        "description": "Wir machen unsere Arbeit mit Leidenschaft und achten auf Details"
+      }
+    },
+    "process": {
+      "title": "Unser Arbeitsprozess",
+      "description": "Wir bringen Ihre Projekte mit unserem professionellen Ansatz zum Leben",
+      "step1": {
+        "title": "Entdeckung & Beratung",
+        "description": "Wir hören auf Ihre Bedürfnisse und bieten kostenlose Inspektion."
+      },
+      "step2": {
+        "title": "Design & 3D-Visualisierung",
+        "description": "Wir bieten maßgeschneidertes Design und 3D-Visualisierung."
+      },
+      "step3": {
+        "title": "Produktion & Installation",
+        "description": "Lieferung mit professioneller Produktion und fehlerfreier Installation."
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Unsere Artikel über Design, Trends und Tipps",
+    "readMore": "Weiterlesen",
+    "categories": {
+      "kitchen": "Küche",
+      "bathroom": "Badezimmer",
+      "furniture": "Möbel",
+      "design": "Design",
+      "technology": "Technologie"
+    }
+  },
+  "admin": {
+    "title": "Admin-Panel",
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "dashboard": "Dashboard",
+    "projects": "Projekte",
+    "blog": "Blog",
+    "gallery": "Galerie",
+    "customers": "Kunden",
+    "settings": "Einstellungen",
+    "languages": "Sprachverwaltung",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "loginSubtitle": "Am System anmelden",
+    "welcome": "Willkommen! Hier ist die Übersicht...",
+    "stats": {
+      "totalProjects": "Gesamtprojekte",
+      "blogPosts": "Blog-Beiträge",
+      "customers": "Kunden",
+      "totalViews": "Gesamtaufrufe"
+    },
+    "recentProjects": "Neueste Projekte",
+    "recentActivities": "Neueste Aktivitäten",
+    "status": {
+      "inProgress": "In Bearbeitung",
+      "completed": "Abgeschlossen",
+      "pending": "Ausstehend",
+      "active": "Aktiv",
+      "draft": "Entwurf",
+      "published": "Veröffentlicht"
+    },
+    "actions": {
+      "add": "Hinzufügen",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "approve": "Genehmigen",
+      "search": "Suchen"
+    },
+    "form": {
+      "title": "Titel",
+      "category": "Kategorie",
+      "description": "Beschreibung",
+      "content": "Inhalt",
+      "image": "Bild-URL",
+      "excerpt": "Auszug",
+      "date": "Datum"
+    },
+    "confirmDelete": "Sind Sie sicher, dass Sie löschen möchten?"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Fehler aufgetreten",
+    "success": "Erfolg",
+    "search": "Suchen...",
+    "filter": "Filtern",
+    "all": "Alle",
+    "readMore": "Weiterlesen",
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle anzeigen"
+  }
+}

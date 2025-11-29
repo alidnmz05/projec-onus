@@ -1,0 +1,6 @@
+@Onus.API_HostAddress = http://localhost:5177
+
+GET {{Onus.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

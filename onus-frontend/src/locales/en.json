@@ -1,0 +1,271 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title1": "Kitchen & Bathroom",
+    "subtitle1": "Applications",
+    "description1": "Offering special solutions that bring elegance and comfort to your living spaces where modern design and functionality meet.",
+    "title2": "Custom Design",
+    "subtitle2": "Furniture",
+    "description2": "Custom-designed furniture solutions that turn your dream living spaces into reality.",
+    "title3": "Modern and Elegant",
+    "subtitle3": "Bathrooms",
+    "description3": "We design your dream bathroom by combining comfort and aesthetics.",
+    "exploreProjects": "Explore Our Projects",
+    "contactUs": "Get in Touch"
+  },
+  "features": {
+    "whyOnus": "Why ONUS?",
+    "subtitle": "We make a difference with our industry experience and quality approach",
+    "customDesign": {
+      "title": "Custom Design",
+      "description": "We create unique designs tailored to you. Every project reflects our clients' dreams."
+    },
+    "3dVisualization": {
+      "title": "3D Visualization",
+      "description": "See your project in 3D before it's realized. Plan all details in advance."
+    },
+    "preciseMeasurement": {
+      "title": "Precise Measurement",
+      "description": "We guarantee perfect measurement and assembly with our professional team."
+    },
+    "qualityGuarantee": {
+      "title": "Quality Guarantee",
+      "description": "We use only the highest quality materials and provide workmanship warranty."
+    },
+    "timelyDelivery": {
+      "title": "Timely Delivery",
+      "description": "We deliver your project on time and value your time."
+    },
+    "awardWinning": {
+      "title": "Award-Winning Projects",
+      "description": "We deliver recognized, award-winning projects in the industry."
+    }
+  },
+  "projects": {
+    "title": "Recent",
+    "subtitle": "Projects",
+    "description": "Transforming living spaces with our completed projects",
+    "viewAll": "View All Projects",
+    "viewDetails": "View Details",
+    "categories": {
+      "all": "All",
+      "kitchen": "Kitchen",
+      "bathroom": "Bathroom",
+      "furniture": "Furniture",
+      "custom": "Custom Design"
+    }
+  },
+  "statistics": {
+    "title": "ONUS",
+    "subtitle": "in Numbers",
+    "description": "A trusted brand with years of experience and successful projects",
+    "completedProjects": "Completed Projects",
+    "happyClients": "Happy Clients",
+    "awards": "Awards & Certificates",
+    "satisfaction": "Satisfaction Rate"
+  },
+  "testimonials": {
+    "title": "Customer Testimonials",
+    "subtitle": "Our customers' satisfaction is our most important success indicator",
+    "customer1": {
+      "name": "Ayse Yilmaz",
+      "role": "Homeowner",
+      "text": "Working with ONUS was wonderful. Our kitchen turned out exactly as we imagined. Quality materials and excellent workmanship. I recommend them to everyone!"
+    },
+    "customer2": {
+      "name": "Mehmet Demir",
+      "role": "Business Owner",
+      "text": "We had custom furniture made for our office. The team was very professional, delivered on time and within budget. We are very satisfied with the result."
+    },
+    "customer3": {
+      "name": "Zeynep Kaya",
+      "role": "Architect",
+      "text": "I confidently recommend ONUS to my clients. Their design approach is modern and functional. The 3D visualization service was very helpful."
+    },
+    "customer4": {
+      "name": "Can Ozkan",
+      "role": "Homeowner",
+      "text": "The transformation of our bathroom was incredible! They used a small space very efficiently. We got a bathroom that is both modern and functional."
+    }
+  },
+  "cta": {
+    "title": "Let's Design Your Dream Living Space Together",
+    "subtitle": "Contact us now for free inspection and consultation. Our expert team is ready to offer you the most suitable solutions.",
+    "getFreeQuote": "Get Free Quote",
+    "callNow": "Call Now",
+    "freeSurvey": "Free Inspection",
+    "3dVisualization": "3D Visualization",
+    "certified": "Certified"
+  },
+  "footer": {
+    "description": "Special solutions that bring elegance and comfort to your living spaces where modern design and functionality meet.",
+    "quickLinks": "Quick Links",
+    "services": "Our Services",
+    "contact": "Contact",
+    "kitchenDesign": "Kitchen Design",
+    "bathroomDesign": "Bathroom Design",
+    "customFurniture": "Custom Furniture",
+    "3dVisualization": "3D Visualization",
+    "consulting": "Consulting",
+    "address": "Nature's Apprentice, Master of Wood\nIstanbul, Turkey",
+    "copyright": "© {{year}} ONUS Kitchen & Bathroom. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Reach us for your projects, let us offer you the most suitable solutions",
+    "info": "Contact Information",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "sendMessage": "Send Message Now",
+    "workingHours": "Working Hours",
+    "weekdays": "Monday - Friday: 09:00 - 18:00",
+    "saturday": "Saturday: 10:00 - 16:00",
+    "sunday": "Sunday: Closed",
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Your Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message Sent!",
+      "required": "All fields are required",
+      "placeholder": {
+        "name": "John Doe",
+        "email": "example@email.com",
+        "phone": "555 555 5555",
+        "subject": "Kitchen Design",
+        "message": "Provide detailed information about your project..."
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "As ONUS Kitchen & Bathroom, we offer special solutions that bring elegance and comfort to your living spaces where modern design and functionality meet.",
+    "content1": "With our slogan \"Nature's Apprentice, Master of Wood\", we create custom designs by processing natural materials in the best way. Every project is a work of art for us.",
+    "content2": "With years of experience and expertise in the industry, we turn your dream living spaces into reality. We offer quality materials, professional team and perfect workmanship guarantee.",
+    "experience": "Years of Experience",
+    "values": {
+      "title": "Our Values",
+      "description": "The core values that shape our work",
+      "quality": {
+        "title": "Quality",
+        "description": "We work to the highest quality standards"
+      },
+      "customerFocused": {
+        "title": "Customer Focused",
+        "description": "Our customers' satisfaction is our priority"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We offer innovative design and solutions"
+      },
+      "passion": {
+        "title": "Passion",
+        "description": "We do our work with passion and pay attention to details"
+      }
+    },
+    "process": {
+      "title": "Our Work Process",
+      "description": "We bring your projects to life with our professional approach",
+      "step1": {
+        "title": "Discovery & Consulting",
+        "description": "We listen to your needs and provide free inspection."
+      },
+      "step2": {
+        "title": "Design & 3D Visual",
+        "description": "We offer custom design and 3D visualization."
+      },
+      "step3": {
+        "title": "Production & Installation",
+        "description": "Delivery with professional production and flawless installation."
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Our articles about design, trends and tips",
+    "readMore": "Read More",
+    "categories": {
+      "kitchen": "Kitchen",
+      "bathroom": "Bathroom",
+      "furniture": "Furniture",
+      "design": "Design",
+      "technology": "Technology"
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "login": "Login",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "blog": "Blog",
+    "gallery": "Gallery",
+    "customers": "Customers",
+    "settings": "Settings",
+    "languages": "Language Management",
+    "username": "Username",
+    "password": "Password",
+    "loginSubtitle": "Login to system",
+    "welcome": "Welcome! Here's the overview...",
+    "stats": {
+      "totalProjects": "Total Projects",
+      "blogPosts": "Blog Posts",
+      "customers": "Customers",
+      "totalViews": "Total Views"
+    },
+    "recentProjects": "Recent Projects",
+    "recentActivities": "Recent Activities",
+    "status": {
+      "inProgress": "In Progress",
+      "completed": "Completed",
+      "pending": "Pending",
+      "active": "Active",
+      "draft": "Draft",
+      "published": "Published"
+    },
+    "actions": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "approve": "Approve",
+      "search": "Search"
+    },
+    "form": {
+      "title": "Title",
+      "category": "Category",
+      "description": "Description",
+      "content": "Content",
+      "image": "Image URL",
+      "excerpt": "Excerpt",
+      "date": "Date"
+    },
+    "confirmDelete": "Are you sure you want to delete?"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "success": "Success",
+    "search": "Search...",
+    "filter": "Filter",
+    "all": "All",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "viewAll": "View All"
+  }
+}
