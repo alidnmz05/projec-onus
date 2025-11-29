@@ -14,10 +14,10 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Değişkenler - İhtiyacınıza göre düzenleyin
-PROJECT_DIR="/var/www/onus"
+PROJECT_DIR="/var/www/onus-project"
 API_DIR="$PROJECT_DIR/Onus.API/Onus.API"
 PUBLISH_DIR="/var/www/onus-api"
-PORT=5000
+PORT=${PORT:-5001}  # Environment variable veya default 5001
 SERVICE_NAME="onus-api"
 
 echo -e "${YELLOW}📦 Proje dizini: $API_DIR${NC}"
@@ -93,7 +93,8 @@ sudo systemctl restart $SERVICE_NAME
 sleep 2
 if systemctl is-active --quiet $SERVICE_NAME; then
     echo -e "${GREEN}✅ Backend API deployment tamamlandı!${NC}"
-    echo -e "${GREEN}🌐 API http://localhost:$PORT adresinde çalışıyor${NC}"
+    echo -e "${GREEN}🌐 API http://178.208.187.213:$PORT adresinde çalışıyor${NC}"
+    echo -e "${GREEN}   (Localhost: http://localhost:$PORT)${NC}"
 else
     echo -e "${RED}❌ Servis başlatılamadı!${NC}"
     sudo systemctl status $SERVICE_NAME
