@@ -50,7 +50,7 @@ const Hero = () => {
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/20 to-transparent" />
               </div>
 
               {/* Content */}
@@ -62,7 +62,7 @@ const Hero = () => {
                     transition={{ delay: 0.2 }}
                   >
                     <motion.h1
-                      className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-4"
+                      className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-dark-900 mb-4 drop-shadow-lg"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3 }}
@@ -70,7 +70,7 @@ const Hero = () => {
                       {slide.title}
                     </motion.h1>
                     <motion.h2
-                      className="text-4xl md:text-6xl lg:text-7xl font-display font-light text-primary-400 mb-8 italic"
+                      className="text-4xl md:text-6xl lg:text-7xl font-display font-light text-primary-600 mb-8 italic drop-shadow-md"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.4 }}
@@ -78,7 +78,7 @@ const Hero = () => {
                       {slide.subtitle}
                     </motion.h2>
                     <motion.p
-                      className="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl leading-relaxed"
+                      className="text-lg md:text-xl text-dark-800 mb-12 max-w-2xl leading-relaxed font-medium drop-shadow"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.5 }}

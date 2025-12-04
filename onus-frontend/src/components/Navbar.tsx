@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaBars, FaTimes, FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -23,6 +23,7 @@ const Navbar = () => {
     { name: t('nav.home'), path: '/' },
     { name: t('nav.projects'), path: '/projeler' },
     { name: t('nav.about'), path: '/hakkimizda' },
+    { name: t('nav.references'), path: '/referanslar' },
     { name: t('nav.blog'), path: '/blog' },
     { name: t('nav.contact'), path: '/iletisim' },
   ];
@@ -31,10 +32,10 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         scrolled 
-          ? 'bg-white/95 backdrop-blur-lg shadow-lg py-4' 
-          : 'bg-transparent py-6'
+          ? 'bg-white shadow-lg py-4' 
+          : 'bg-white/95 backdrop-blur-sm shadow-md py-6'
       }`}
     >
       <div className="section-padding">
@@ -58,9 +59,7 @@ const Navbar = () => {
                 className={`relative font-medium transition-colors duration-300 ${
                   location.pathname === item.path
                     ? 'text-primary-600'
-                    : scrolled 
-                      ? 'text-dark-900 hover:text-primary-600' 
-                      : 'text-white hover:text-primary-400'
+                    : 'text-dark-900 hover:text-primary-600'
                 }`}
               >
                 {item.name}
@@ -81,9 +80,7 @@ const Navbar = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className={`transition-colors duration-300 ${
-                scrolled ? 'text-dark-600 hover:text-primary-600' : 'text-white hover:text-primary-400'
-              }`}
+              className="text-dark-600 hover:text-primary-600 transition-colors duration-300"
             >
               <FaFacebook size={20} />
             </a>
@@ -91,15 +88,27 @@ const Navbar = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className={`transition-colors duration-300 ${
-                scrolled ? 'text-dark-600 hover:text-primary-600' : 'text-white hover:text-primary-400'
-              }`}
+              className="text-dark-600 hover:text-primary-600 transition-colors duration-300"
             >
               <FaInstagram size={20} />
             </a>
             <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark-600 hover:text-primary-600 transition-colors duration-300"
+            >
+              <FaLinkedin size={20} />
+            </a>
+            <a
               href="https://wa.me/905555555555"
               target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark-600 hover:text-primary-600 transition-colors duration-300"
+            >
+              <FaWhatsapp size={20} />
+            </a>
+          </div>
               rel="noopener noreferrer"
               className={`transition-colors duration-300 ${
                 scrolled ? 'text-dark-600 hover:text-primary-600' : 'text-white hover:text-primary-400'

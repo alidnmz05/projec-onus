@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaWhatsapp, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
@@ -24,18 +24,32 @@ const Footer = () => {
             <div className="flex space-x-4 mt-6">
               <a
                 href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <FaFacebook />
               </a>
               <a
                 href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <FaInstagram />
               </a>
               <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300"
+              >
+                <FaLinkedin />
+              </a>
+              <a
                 href="https://wa.me/905555555555"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <FaWhatsapp />

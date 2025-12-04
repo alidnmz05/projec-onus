@@ -4,6 +4,7 @@ import AdminLogin from '../components/admin/AdminLogin';
 import AdminDashboard from '../components/admin/AdminDashboard';
 import AdminProjects from '../components/admin/AdminProjects';
 import AdminBlog from '../components/admin/AdminBlog';
+import AdminReferences from '../components/admin/AdminReferences';
 import AdminSettings from '../components/admin/AdminSettings';
 import AdminSidebar from '../components/admin/AdminSidebar';
 
@@ -23,6 +24,7 @@ const Admin = () => {
           <Route path="/dashboard" element={<AdminDashboard />} />
           <Route path="/projects" element={<AdminProjects />} />
           <Route path="/blog" element={<AdminBlog />} />
+          <Route path="/references" element={<AdminReferences />} />
           <Route path="/settings" element={<AdminSettings />} />
         </Routes>
       </div>

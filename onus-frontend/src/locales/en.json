@@ -3,6 +3,7 @@
     "home": "Home",
     "projects": "Projects",
     "about": "About",
+    "references": "References",
     "blog": "Blog",
     "contact": "Contact"
   },
@@ -256,6 +257,17 @@
       "date": "Date"
     },
     "confirmDelete": "Are you sure you want to delete?"
+  },
+  "references": {
+    "title": "Our References",
+    "subtitle": "& Partners",
+    "description": "We grow together with our trusted business partners and satisfied customers. We make a difference with projects carried out with leading companies in the industry.",
+    "year": "Year",
+    "visitWebsite": "Visit Website",
+    "noReferences": "No references yet.",
+    "totalClients": "Happy Clients",
+    "industries": "Different Industries",
+    "yearsExperience": "Years of Experience"
   },
   "common": {
     "loading": "Loading...",

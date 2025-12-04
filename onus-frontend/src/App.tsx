@@ -7,6 +7,7 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import References from './pages/References';
 import Admin from './pages/Admin';
 import Loader from './components/Loader';
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projeler" element={<Projects />} />
             <Route path="/hakkimizda" element={<About />} />
+            <Route path="/referanslar" element={<References />} />
             <Route path="/iletisim" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/admin/*" element={<Admin />} />

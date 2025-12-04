@@ -16,6 +16,7 @@ namespace Onus.API.Data
         public DbSet<ContactMessage> ContactMessages { get; set; }
         public DbSet<SiteSettings> SiteSettings { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Reference> References { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -87,6 +88,40 @@ namespace Onus.API.Data
                     IsPublished = true,
                     PublishedDate = DateTime.UtcNow,
                     CreatedDate = DateTime.UtcNow
+                }
+            );
+
+            // Seed sample references
+            modelBuilder.Entity<Reference>().HasData(
+                new Reference
+                {
+                    Id = 1,
+                    CompanyName = "Hilton Hotels",
+                    Logo = "https://upload.wikimedia.org/wikipedia/commons/4/44/Hilton_Worldwide_Logo.svg",
+                    Industry = "Otelcilik",
+                    Year = 2023,
+                    Website = "https://www.hilton.com",
+                    Description = "5 yıldızlı otel mutfak ve banyo tadilat projesi"
+                },
+                new Reference
+                {
+                    Id = 2,
+                    CompanyName = "Starbucks",
+                    Logo = "https://upload.wikimedia.org/wikipedia/en/d/d3/Starbucks_Corporation_Logo_2011.svg",
+                    Industry = "Restoran",
+                    Year = 2024,
+                    Website = "https://www.starbucks.com",
+                    Description = "Cafe mobilya ve dekorasyon projeleri"
+                },
+                new Reference
+                {
+                    Id = 3,
+                    CompanyName = "Mercedes-Benz",
+                    Logo = "https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg",
+                    Industry = "Otomotiv",
+                    Year = 2023,
+                    Website = "https://www.mercedes-benz.com",
+                    Description = "Showroom ve ofis iç mekan projesi"
                 }
             );
         }

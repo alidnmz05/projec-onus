@@ -3,6 +3,7 @@
     "home": "Startseite",
     "projects": "Projekte",
     "about": "Über uns",
+    "references": "Referenzen",
     "blog": "Blog",
     "contact": "Kontakt"
   },
@@ -256,6 +257,17 @@
       "date": "Datum"
     },
     "confirmDelete": "Sind Sie sicher, dass Sie löschen möchten?"
+  },
+  "references": {
+    "title": "Unsere Referenzen",
+    "subtitle": "& Partner",
+    "description": "Wir wachsen zusammen mit unseren vertrauenswürdigen Geschäftspartnern und zufriedenen Kunden. Wir machen den Unterschied mit Projekten, die mit führenden Unternehmen der Branche durchgeführt werden.",
+    "year": "Jahr",
+    "visitWebsite": "Website besuchen",
+    "noReferences": "Noch keine Referenzen.",
+    "totalClients": "Zufriedene Kunden",
+    "industries": "Verschiedene Branchen",
+    "yearsExperience": "Jahre Erfahrung"
   },
   "common": {
     "loading": "Wird geladen...",

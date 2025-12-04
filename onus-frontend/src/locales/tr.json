@@ -3,6 +3,7 @@
     "home": "Ana Sayfa",
     "projects": "Projeler",
     "about": "Hakkımızda",
+    "references": "Referanslar",
     "blog": "Blog",
     "contact": "İletişim"
   },
@@ -256,6 +257,17 @@
       "date": "Tarih"
     },
     "confirmDelete": "Silmek istediğinizden emin misiniz?"
+  },
+  "references": {
+    "title": "Referanslarımız",
+    "subtitle": "& İş Ortaklarımız",
+    "description": "Güvenilir iş ortaklarımız ve memnun müşterilerimiz ile birlikte büyüyoruz. Sektörün önde gelen firmaları ile gerçekleştirdiğimiz projelerle fark yaratıyoruz.",
+    "year": "Yıl",
+    "visitWebsite": "Web Sitesini Ziyaret Et",
+    "noReferences": "Henüz referans bulunmamaktadır.",
+    "totalClients": "Mutlu Müşteri",
+    "industries": "Farklı Sektör",
+    "yearsExperience": "Yıllık Deneyim"
   },
   "common": {
     "loading": "Yükleniyor...",

@@ -51,7 +51,7 @@ const ProjectsShowcase = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-50">
       <div className="section-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,16 +75,16 @@ const ProjectsShowcase = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer bg-white"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-600/95 via-primary-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   <span className="inline-block bg-primary-600 text-white text-xs px-3 py-1 rounded-full mb-3">
                     {project.category}
