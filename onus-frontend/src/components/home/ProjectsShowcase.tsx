@@ -51,23 +51,23 @@ const ProjectsShowcase = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="section-padding">
+    <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-dark-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-dark-900 mb-3 md:mb-4">
             {t('projects.title')} <span className="gradient-text">{t('projects.subtitle')}</span>
           </h2>
-          <p className="text-lg text-dark-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-dark-600 max-w-2xl mx-auto px-4">
             {t('projects.description')}
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-10 md:mb-12">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -113,7 +113,7 @@ const ProjectsShowcase = () => {
         >
           <Link
             to="/projeler"
-            className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl text-sm md:text-base"
           >
             <span>{t('projects.viewAll')}</span>
             <FaArrowRight />

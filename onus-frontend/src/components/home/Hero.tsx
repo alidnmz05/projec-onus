@@ -62,7 +62,7 @@ const Hero = () => {
                     transition={{ delay: 0.2 }}
                   >
                     <motion.h1
-                      className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-dark-900 mb-4 drop-shadow-lg"
+                      className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold text-dark-900 mb-3 md:mb-4 drop-shadow-lg leading-tight"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3 }}
@@ -70,7 +70,7 @@ const Hero = () => {
                       {slide.title}
                     </motion.h1>
                     <motion.h2
-                      className="text-4xl md:text-6xl lg:text-7xl font-display font-light text-primary-600 mb-8 italic drop-shadow-md"
+                      className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-light text-primary-600 mb-4 md:mb-6 lg:mb-8 italic drop-shadow-md leading-tight"
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.4 }}
@@ -78,7 +78,7 @@ const Hero = () => {
                       {slide.subtitle}
                     </motion.h2>
                     <motion.p
-                      className="text-lg md:text-xl text-dark-800 mb-12 max-w-2xl leading-relaxed font-medium drop-shadow"
+                      className="text-sm xs:text-base md:text-lg lg:text-xl text-dark-800 mb-6 md:mb-10 lg:mb-12 max-w-2xl leading-relaxed font-medium drop-shadow"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.5 }}
@@ -86,14 +86,14 @@ const Hero = () => {
                       {slide.description}
                     </motion.p>
                     <motion.div
-                      className="flex flex-wrap gap-4"
+                      className="flex flex-col xs:flex-row flex-wrap gap-3 md:gap-4"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.6 }}
                     >
                       <Link
                         to="/projeler"
-                        className="group bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2 hover:shadow-2xl hover:scale-105"
+                        className="group bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:shadow-2xl hover:scale-105 text-sm md:text-base"
                       >
                         <span>{t('hero.exploreProjects')}</span>
                         <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
