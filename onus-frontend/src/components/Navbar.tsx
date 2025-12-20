@@ -44,7 +44,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center">
             <motion.img
               whileHover={{ scale: 1.05 }}
-              src="/logo.svg"
+              src="/logo.jpg"
               alt="ONUS"
               className="h-10 sm:h-12 md:h-14 lg:h-16 object-contain"
             />

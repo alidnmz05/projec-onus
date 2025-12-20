@@ -121,6 +121,7 @@
   },
   "contact": {
     "title": "Contact",
+    "subtitle": "Get In Touch",
     "description": "Reach us for your projects, let us offer you the most suitable solutions",
     "info": "Contact Information",
     "address": "Address",
@@ -143,6 +144,8 @@
       "sending": "Sending...",
       "success": "Message Sent!",
       "required": "All fields are required",
+      "requiredFields": "* Required fields",
+      "sendButton": "Send",
       "placeholder": {
         "name": "John Doe",
         "email": "example@email.com",
