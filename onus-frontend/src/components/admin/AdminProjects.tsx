@@ -7,7 +7,6 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5177/api';
 
 const AdminProjects = () => {
   const [projects, setProjects] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetchProjects();

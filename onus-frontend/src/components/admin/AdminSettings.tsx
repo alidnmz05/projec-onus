@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FaSave, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaSave, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5177/api';
 
@@ -15,7 +15,6 @@ const AdminSettings = () => {
     instagramUrl: 'https://instagram.com',
     whatsAppNumber: '+905555555555',
   });
-  const [isLoading, setIsLoading] = useState(true);
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
