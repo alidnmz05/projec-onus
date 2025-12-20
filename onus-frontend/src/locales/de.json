@@ -121,6 +121,7 @@
   },
   "contact": {
     "title": "Kontakt",
+    "subtitle": "Kontaktieren Sie uns",
     "description": "Kontaktieren Sie uns für Ihre Projekte, lassen Sie uns Ihnen die am besten geeigneten Lösungen anbieten",
     "info": "Kontaktinformationen",
     "address": "Adresse",
@@ -143,6 +144,8 @@
       "sending": "Wird gesendet...",
       "success": "Nachricht gesendet!",
       "required": "Alle Felder sind erforderlich",
+      "requiredFields": "* Pflichtfelder",
+      "sendButton": "Senden",
       "placeholder": {
         "name": "Max Mustermann",
         "email": "beispiel@email.com",

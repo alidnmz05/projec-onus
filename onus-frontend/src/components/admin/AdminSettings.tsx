@@ -1,24 +1,52 @@
-import { useState } from 'react';
-import { FaSave, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { FaSave, FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5177/api';
 
 const AdminSettings = () => {
   const [settings, setSettings] = useState({
+    id: 1,
     siteName: 'ONUS Mutfak & Banyo',
     email: 'info@onus.com.tr',
     phone: '+90 555 555 55 55',
     address: 'Doğanın Çırağı, Ahşabın Ustası\nİstanbul, Türkiye',
-    facebook: 'https://facebook.com',
-    instagram: 'https://instagram.com',
-    whatsapp: '+905555555555',
+    facebookUrl: 'https://facebook.com',
+    instagramUrl: 'https://instagram.com',
+    whatsAppNumber: '+905555555555',
   });
-
+  const [isLoading, setIsLoading] = useState(true);
   const [saved, setSaved] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    fetchSettings();
+  }, []);
+
+  const fetchSettings = async () => {
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`${API_URL}/settings`);
+      if (response.data && response.data.length > 0) {
+        setSettings(response.data[0]);
+      }
+    } catch (error) {
+      console.error('Error fetching settings:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Save settings
-    setSaved(true);
-    setTimeout(() => setSaved(false), 3000);
+    try {
+      await axios.put(`${API_URL}/settings/${settings.id}`, settings);
+      setSaved(true);
+      setTimeout(() => setSaved(false), 3000);
+      alert('Ayarlar kaydedildi');
+    } catch (error) {
+      console.error('Error saving settings:', error);
+      alert('Ayarlar kaydedilirken hata oluştu');
+    }
   };
 
   return (
@@ -95,8 +123,8 @@ const AdminSettings = () => {
               </label>
               <input
                 type="url"
-                value={settings.facebook}
-                onChange={(e) => setSettings({ ...settings, facebook: e.target.value })}
+                value={settings.facebookUrl}
+                onChange={(e) => setSettings({ ...settings, facebookUrl: e.target.value })}
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-600 focus:outline-none"
               />
             </div>
@@ -108,8 +136,8 @@ const AdminSettings = () => {
               </label>
               <input
                 type="url"
-                value={settings.instagram}
-                onChange={(e) => setSettings({ ...settings, instagram: e.target.value })}
+                value={settings.instagramUrl}
+                onChange={(e) => setSettings({ ...settings, instagramUrl: e.target.value })}
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-600 focus:outline-none"
               />
             </div>
@@ -120,8 +148,8 @@ const AdminSettings = () => {
               </label>
               <input
                 type="tel"
-                value={settings.whatsapp}
-                onChange={(e) => setSettings({ ...settings, whatsapp: e.target.value })}
+                value={settings.whatsAppNumber}
+                onChange={(e) => setSettings({ ...settings, whatsAppNumber: e.target.value })}
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary-600 focus:outline-none"
                 placeholder="+905555555555"
               />

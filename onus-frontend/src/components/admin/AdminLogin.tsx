@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaUser, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 interface AdminLoginProps {
-  onLogin: () => void;
+  onLogin: (success: boolean) => void;
 }
 
 const AdminLogin = ({ onLogin }: AdminLoginProps) => {
@@ -19,7 +19,7 @@ const AdminLogin = ({ onLogin }: AdminLoginProps) => {
     
     // Demo credentials - replace with real authentication
     if (credentials.username === 'admin' && credentials.password === 'admin123') {
-      onLogin();
+      onLogin(true);
     } else {
       setError('Kullanıcı adı veya şifre hatalı!');
       setTimeout(() => setError(''), 3000);

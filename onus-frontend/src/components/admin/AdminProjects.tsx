@@ -1,26 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { motion } from 'framer-motion';
 import { FaPlus, FaEdit, FaTrash, FaSave, FaTimes } from 'react-icons/fa';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5177/api';
+
 const AdminProjects = () => {
-  const [projects, setProjects] = useState([
-    {
-      id: 1,
-      title: 'Modern Mutfak Tasarımı',
-      category: 'Mutfak',
-      image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=400&q=80',
-      description: 'Minimal ve fonksiyonel mutfak çözümü',
-      status: 'Aktif',
-    },
-    {
-      id: 2,
-      title: 'Lüks Banyo Projesi',
-      category: 'Banyo',
-      image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=400&q=80',
-      description: 'Spa konseptli modern banyo',
-      status: 'Aktif',
-    },
-  ]);
+  const [projects, setProjects] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+
+  const fetchProjects = async () => {
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`${API_URL}/projects`);
+      setProjects(response.data);
+    } catch (error) {
+      console.error('Error fetching projects:', error);
+      alert('Projeler yüklenirken hata oluştu');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingProject, setEditingProject] = useState<any>(null);
@@ -31,22 +35,34 @@ const AdminProjects = () => {
     image: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (editingProject) {
-      setProjects(projects.map(p => 
-        p.id === editingProject.id 
-          ? { ...p, ...formData }
-          : p
-      ));
-    } else {
-      setProjects([...projects, {
-        id: Date.now(),
-        ...formData,
-        status: 'Aktif',
-      }]);
+    try {
+      const projectData = {
+        title: formData.title,
+        description: formData.description,
+        category: formData.category,
+        imageUrl: formData.image,
+        isActive: true,
+        createdDate: new Date().toISOString()
+      };
+
+      if (editingProject) {
+        await axios.put(`${API_URL}/projects/${editingProject.id}`, {
+          ...projectData,
+          id: editingProject.id
+        });
+        alert('Proje güncellendi');
+      } else {
+        await axios.post(`${API_URL}/projects`, projectData);
+        alert('Proje eklendi');
+      }
+      await fetchProjects();
+      closeModal();
+    } catch (error) {
+      console.error('Error saving project:', error);
+      alert('Proje kaydedilirken hata oluştu');
     }
-    closeModal();
   };
 
   const openModal = (project?: any) => {
@@ -75,9 +91,15 @@ const AdminProjects = () => {
     setEditingProject(null);
   };
 
-  const handleDelete = (id: number) => {
-    if (confirm('Bu projeyi silmek istediğinizden emin misiniz?')) {
-      setProjects(projects.filter(p => p.id !== id));
+  const handleDelete = async (id: number) => {
+    if (!confirm('Bu projeyi silmek istediğinizden emin misiniz?')) return;
+    try {
+      await axios.delete(`${API_URL}/projects/${id}`);
+      await fetchProjects();
+      alert('Proje silindi');
+    } catch (error) {
+      console.error('Error deleting project:', error);
+      alert('Proje silinirken hata oluştu');
     }
   };
 

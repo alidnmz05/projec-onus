@@ -7,8 +7,20 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Add DbContext
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseInMemoryDatabase("OnusDB")); // For development, use InMemory database
+{
+    if (string.IsNullOrEmpty(connectionString))
+    {
+        // Development: InMemory database
+        options.UseInMemoryDatabase("OnusDB");
+    }
+    else
+    {
+        // Production: PostgreSQL
+        options.UseNpgsql(connectionString);
+    }
+});
 
 // Add CORS
 builder.Services.AddCors(options =>
@@ -16,11 +28,13 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend",
         builder => builder
             .WithOrigins(
-                "http://localhost:3000", 
+                "http://localhost:3000",
+                "http://localhost:3001", 
                 "http://localhost:5173",
-                "http://178.208.187.213:3000",
-                "http://178.208.187.213:3001",
-                "http://178.208.187.213:3100"
+                "http://onus.com.tr",
+                "https://onus.com.tr",
+                "http://www.onus.com.tr",
+                "https://www.onus.com.tr"
             )
             .AllowAnyMethod()
             .AllowAnyHeader()

@@ -13,9 +13,9 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Değişkenler - İhtiyacınıza göre düzenleyin
-DOMAIN="your-domain.com"  # Domain adınızı buraya yazın
-FRONTEND_PORT=8080
-BACKEND_PORT=5000
+DOMAIN="onus.com.tr"  # Domain adı
+FRONTEND_PORT=3000
+BACKEND_PORT=5001
 
 echo -e "${YELLOW}🌍 Domain: $DOMAIN${NC}"
 echo -e "${YELLOW}🔌 Frontend Port: $FRONTEND_PORT${NC}"

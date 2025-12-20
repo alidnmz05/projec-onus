@@ -88,7 +88,7 @@ echo -e "${GREEN}✓ Build tamamlandı${NC}"
 echo -e "${YELLOW}.env dosyası oluşturuluyor...${NC}"
 cat > .env.production << EOF
 PORT=${FRONTEND_PORT}
-VITE_API_URL=http://178.208.187.213:5001
+VITE_API_URL=https://onus.com.tr/api
 EOF
 echo -e "${GREEN}✓ .env.production oluşturuldu${NC}"
 

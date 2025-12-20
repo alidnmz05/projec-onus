@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { FaHome, FaProjectDiagram, FaBlog, FaCog, FaSignOutAlt, FaHandshake } from 'react-icons/fa';
+import { FaHome, FaProjectDiagram, FaBlog, FaCog, FaSignOutAlt, FaHandshake, FaImage } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const AdminSidebar = () => {
@@ -7,6 +7,7 @@ const AdminSidebar = () => {
 
   const menuItems = [
     { name: 'Dashboard', path: '/admin/dashboard', icon: FaHome },
+    { name: 'Ana Sayfa Slaytları', path: '/admin/hero-slides', icon: FaImage },
     { name: 'Projeler', path: '/admin/projects', icon: FaProjectDiagram },
     { name: 'Blog', path: '/admin/blog', icon: FaBlog },
     { name: 'Referanslar', path: '/admin/references', icon: FaHandshake },

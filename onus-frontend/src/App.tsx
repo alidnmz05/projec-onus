@@ -24,21 +24,28 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projeler" element={<Projects />} />
-            <Route path="/hakkimizda" element={<About />} />
-            <Route path="/referanslar" element={<References />} />
-            <Route path="/iletisim" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/admin/*" element={<Admin />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Routes>
+        {/* Admin routes - no navbar/footer */}
+        <Route path="/admin/*" element={<Admin />} />
+        
+        {/* Public routes - with navbar/footer */}
+        <Route path="*" element={
+          <div className="min-h-screen flex flex-col">
+            <Navbar />
+            <main className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projeler" element={<Projects />} />
+                <Route path="/hakkimizda" element={<About />} />
+                <Route path="/referanslar" element={<References />} />
+                <Route path="/iletisim" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        } />
+      </Routes>
     </Router>
   );
 }

@@ -46,7 +46,30 @@ dotnet restore
 echo -e "${YELLOW}🏗️  Build oluşturuluyor...${NC}"
 dotnet publish -c Release -o $PUBLISH_DIR
 
-# appsettings.Production.json oluştur
+# Database Migration Uygula
+echo -e "${YELLOW}🗄️  Database migration uygulanıyor...${NC}"
+export ASPNETCORE_ENVIRONMENT=Production
+
+# EF Core Tools yüklü mü kontrol et
+if ! dotnet tool list -g | grep -q 'dotnet-ef'; then
+    echo -e "${YELLOW}📦 EF Core Tools yükleniyor...${NC}"
+    dotnet tool install --global dotnet-ef
+fi
+
+# Migration uygula (connection string varsa)
+if [ -f "$PUBLISH_DIR/appsettings.Production.json" ]; then
+    CONNECTION_STRING=$(grep -Po '"DefaultConnection":\s*"\K[^"]*' "$PUBLISH_DIR/appsettings.Production.json" 2>/dev/null || echo "")
+    if [ ! -z "$CONNECTION_STRING" ] && [ "$CONNECTION_STRING" != "" ]; then
+        echo -e "${GREEN}✅ PostgreSQL connection string bulundu, migration uygulanıyor...${NC}"
+        dotnet ef database update --project $API_DIR/Onus.API.csproj || echo -e "${YELLOW}⚠️  Migration uygulanamadı (ilk deploy ise normal)${NC}"
+    else
+        echo -e "${YELLOW}⚠️  Connection string boş, InMemory database kullanılacak${NC}"
+    fi
+else
+    echo -e "${YELLOW}⚠️  appsettings.Production.json bulunamadı${NC}"
+fi
+
+# appsettings.Production.json oluştur (yoksa)
 echo -e "${YELLOW}⚙️  Production ayarları yapılandırılıyor...${NC}"
 cat > $PUBLISH_DIR/appsettings.Production.json << EOF
 {

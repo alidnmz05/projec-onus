@@ -50,3 +50,4 @@ packages/
 
 # Environment
 appsettings.Development.json
+appsettings.Production.json

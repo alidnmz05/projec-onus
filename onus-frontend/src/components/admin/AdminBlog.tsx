@@ -1,26 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { motion } from 'framer-motion';
 import { FaPlus, FaEdit, FaTrash, FaSave, FaTimes } from 'react-icons/fa';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5177/api';
+
 const AdminBlog = () => {
-  const [posts, setPosts] = useState([
-    {
-      id: 1,
-      title: 'Modern Mutfak Tasarım Trendleri 2024',
-      excerpt: 'Mutfak tasarımında 2024 yılının en öne çıkan trendleri...',
-      category: 'Mutfak',
-      date: '2024-11-15',
-      status: 'Yayında',
-    },
-    {
-      id: 2,
-      title: 'Küçük Banyolarda Alan Kullanımı',
-      excerpt: 'Küçük banyolarda maksimum verimlilik için...',
-      category: 'Banyo',
-      date: '2024-11-10',
-      status: 'Taslak',
-    },
-  ]);
+  const [posts, setPosts] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
+
+  const fetchPosts = async () => {
+    try {
+      setIsLoading(true);
+      const response = await axios.get(`${API_URL}/blog`);
+      setPosts(response.data);
+    } catch (error) {
+      console.error('Error fetching posts:', error);
+      alert('Blog yazıları yüklenirken hata oluştu');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingPost, setEditingPost] = useState<any>(null);
@@ -31,23 +35,37 @@ const AdminBlog = () => {
     content: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (editingPost) {
-      setPosts(posts.map(p => 
-        p.id === editingPost.id 
-          ? { ...p, ...formData, date: new Date().toISOString().split('T')[0] }
-          : p
-      ));
-    } else {
-      setPosts([...posts, {
-        id: Date.now(),
-        ...formData,
-        date: new Date().toISOString().split('T')[0],
-        status: 'Taslak',
-      }]);
+    try {
+      const blogData = {
+        title: formData.title,
+        excerpt: formData.excerpt,
+        content: formData.content,
+        category: formData.category,
+        imageUrl: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80',
+        author: 'Admin',
+        isPublished: false,
+        createdDate: new Date().toISOString()
+      };
+
+      if (editingPost) {
+        await axios.put(`${API_URL}/blog/${editingPost.id}`, {
+          ...blogData,
+          id: editingPost.id,
+          isPublished: editingPost.isPublished
+        });
+        alert('Yazı güncellendi');
+      } else {
+        await axios.post(`${API_URL}/blog`, blogData);
+        alert('Yazı eklendi');
+      }
+      await fetchPosts();
+      closeModal();
+    } catch (error) {
+      console.error('Error saving post:', error);
+      alert('Yazı kaydedilirken hata oluştu');
     }
-    closeModal();
   };
 
   const openModal = (post?: any) => {
@@ -76,18 +94,29 @@ const AdminBlog = () => {
     setEditingPost(null);
   };
 
-  const handleDelete = (id: number) => {
-    if (confirm('Bu yazıyı silmek istediğinizden emin misiniz?')) {
-      setPosts(posts.filter(p => p.id !== id));
+  const handleDelete = async (id: number) => {
+    if (!confirm('Bu yazıyı silmek istediğinizden emin misiniz?')) return;
+    try {
+      await axios.delete(`${API_URL}/blog/${id}`);
+      await fetchPosts();
+      alert('Yazı silindi');
+    } catch (error) {
+      console.error('Error deleting post:', error);
+      alert('Yazı silinirken hata oluştu');
     }
   };
 
-  const toggleStatus = (id: number) => {
-    setPosts(posts.map(p => 
-      p.id === id 
-        ? { ...p, status: p.status === 'Yayında' ? 'Taslak' : 'Yayında' }
-        : p
-    ));
+  const toggleStatus = async (post: any) => {
+    try {
+      await axios.put(`${API_URL}/blog/${post.id}`, {
+        ...post,
+        isPublished: !post.isPublished
+      });
+      await fetchPosts();
+    } catch (error) {
+      console.error('Error toggling status:', error);
+      alert('Durum değiştirilirken hata oluştu');
+    }
   };
 
   return (
@@ -137,17 +166,19 @@ const AdminBlog = () => {
                     {post.category}
                   </span>
                 </td>
-                <td className="px-6 py-4 text-dark-600">{post.date}</td>
+                <td className="px-6 py-4 text-dark-600">
+                  {new Date(post.createdDate).toLocaleDateString('tr-TR')}
+                </td>
                 <td className="px-6 py-4">
                   <button
-                    onClick={() => toggleStatus(post.id)}
+                    onClick={() => toggleStatus(post)}
                     className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      post.status === 'Yayında'
+                      post.isPublished
                         ? 'bg-green-100 text-green-600'
                         : 'bg-yellow-100 text-yellow-600'
                     }`}
                   >
-                    {post.status}
+                    {post.isPublished ? 'Yayında' : 'Taslak'}
                   </button>
                 </td>
                 <td className="px-6 py-4 text-right">

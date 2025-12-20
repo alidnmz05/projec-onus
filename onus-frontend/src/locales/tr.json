@@ -121,6 +121,7 @@
   },
   "contact": {
     "title": "İletişim",
+    "subtitle": "Bizimle İletişime Geçin",
     "description": "Projeleriniz için bize ulaşın, size en uygun çözümleri sunalım",
     "info": "İletişim Bilgileri",
     "address": "Adres",
@@ -143,6 +144,8 @@
       "sending": "Gönderiliyor...",
       "success": "Mesajınız Gönderildi!",
       "required": "Tüm alanların doldurulması zorunludur",
+      "requiredFields": "* Zorunlu alanlar",
+      "sendButton": "Gönder",
       "placeholder": {
         "name": "İsim Soyisim",
         "email": "ornek@email.com",

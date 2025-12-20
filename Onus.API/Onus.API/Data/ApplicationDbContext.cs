@@ -17,6 +17,9 @@ namespace Onus.API.Data
         public DbSet<SiteSettings> SiteSettings { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Reference> References { get; set; }
+        public DbSet<HeroSlide> HeroSlides { get; set; }
+        public DbSet<Statistic> Statistics { get; set; }
+        public DbSet<PageContent> PageContents { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -122,6 +125,176 @@ namespace Onus.API.Data
                     Year = 2023,
                     Website = "https://www.mercedes-benz.com",
                     Description = "Showroom ve ofis iç mekan projesi"
+                }
+            );
+
+            // Seed hero slides
+            modelBuilder.Entity<HeroSlide>().HasData(
+                new HeroSlide
+                {
+                    Id = 1,
+                    Title = "Doğanın Çırağı",
+                    Subtitle = "Ahşabın Ustası",
+                    Description = "Özel tasarım mutfak ve banyo çözümleri ile hayallerinizdeki mekanları yaratıyoruz.",
+                    ImageUrl = "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1920&q=80",
+                    ButtonText = "Projelerimizi Keşfedin",
+                    ButtonLink = "/projeler",
+                    Order = 1,
+                    IsActive = true
+                },
+                new HeroSlide
+                {
+                    Id = 2,
+                    Title = "El İşçiliğinde Mükemmellik",
+                    Subtitle = "Her Detayda Kalite",
+                    Description = "Yılların deneyimi ile ahşap işçiliğinde en üst düzey kaliteyi sunuyoruz.",
+                    ImageUrl = "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1920&q=80",
+                    ButtonText = "Hakkımızda",
+                    ButtonLink = "/hakkimizda",
+                    Order = 2,
+                    IsActive = true
+                },
+                new HeroSlide
+                {
+                    Id = 3,
+                    Title = "Modern ve Zamansız Tasarımlar",
+                    Subtitle = "Hayalleriniz, Bizim İşimiz",
+                    Description = "Butik üretim anlayışı ile size özel mutfak ve banyo çözümleri.",
+                    ImageUrl = "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1920&q=80",
+                    ButtonText = "İletişime Geçin",
+                    ButtonLink = "/iletisim",
+                    Order = 3,
+                    IsActive = true
+                }
+            );
+
+            // Seed statistics
+            modelBuilder.Entity<Statistic>().HasData(
+                new Statistic
+                {
+                    Id = 1,
+                    Title = "Tamamlanan Proje",
+                    Value = "500+",
+                    Icon = "CheckCircle",
+                    Order = 1
+                },
+                new Statistic
+                {
+                    Id = 2,
+                    Title = "Mutlu Müşteri",
+                    Value = "98%",
+                    Icon = "Heart",
+                    Order = 2
+                },
+                new Statistic
+                {
+                    Id = 3,
+                    Title = "Yıllık Deneyim",
+                    Value = "15+",
+                    Icon = "Award",
+                    Order = 3
+                },
+                new Statistic
+                {
+                    Id = 4,
+                    Title = "Uzman Ekip",
+                    Value = "25+",
+                    Icon = "Users",
+                    Order = 4
+                }
+            );
+
+            // Seed page contents - CTA Section
+            modelBuilder.Entity<PageContent>().HasData(
+                new PageContent
+                {
+                    Id = 1,
+                    Page = "home",
+                    Section = "cta",
+                    ContentKey = "title",
+                    ContentValue = "Projeniz İçin Ücretsiz Teklif Alın"
+                },
+                new PageContent
+                {
+                    Id = 2,
+                    Page = "home",
+                    Section = "cta",
+                    ContentKey = "description",
+                    ContentValue = "Uzman ekibimiz hayallerinizdeki mutfak ve banyo tasarımını gerçeğe dönüştürmeye hazır. Hemen iletişime geçin, ücretsiz keşif ve teklif hizmetinden faydalanın."
+                },
+                new PageContent
+                {
+                    Id = 3,
+                    Page = "home",
+                    Section = "cta",
+                    ContentKey = "buttonText",
+                    ContentValue = "İletişime Geçin"
+                },
+                new PageContent
+                {
+                    Id = 4,
+                    Page = "home",
+                    Section = "cta",
+                    ContentKey = "buttonLink",
+                    ContentValue = "/iletisim"
+                },
+                // Footer content
+                new PageContent
+                {
+                    Id = 5,
+                    Page = "footer",
+                    Section = "main",
+                    ContentKey = "description",
+                    ContentValue = "Doğanın çırağı, ahşabın ustası. ONUS Mutfak & Banyo olarak özel tasarım mutfak ve banyo çözümleri sunuyoruz."
+                },
+                new PageContent
+                {
+                    Id = 6,
+                    Page = "footer",
+                    Section = "main",
+                    ContentKey = "address",
+                    ContentValue = "İstanbul, Türkiye"
+                },
+                new PageContent
+                {
+                    Id = 7,
+                    Page = "footer",
+                    Section = "main",
+                    ContentKey = "phone",
+                    ContentValue = "+90 555 555 55 55"
+                },
+                new PageContent
+                {
+                    Id = 8,
+                    Page = "footer",
+                    Section = "main",
+                    ContentKey = "email",
+                    ContentValue = "info@onus.com.tr"
+                },
+                // About page content
+                new PageContent
+                {
+                    Id = 9,
+                    Page = "about",
+                    Section = "hero",
+                    ContentKey = "title",
+                    ContentValue = "Hakkımızda"
+                },
+                new PageContent
+                {
+                    Id = 10,
+                    Page = "about",
+                    Section = "hero",
+                    ContentKey = "subtitle",
+                    ContentValue = "Doğanın Çırağı, Ahşabın Ustası"
+                },
+                new PageContent
+                {
+                    Id = 11,
+                    Page = "about",
+                    Section = "content",
+                    ContentKey = "mainText",
+                    ContentValue = "ONUS Mutfak & Banyo olarak 15 yılı aşkın süredir, doğal ahşabın sıcaklığını modern tasarımla buluşturarak hayallerinizdeki mekanları yaratıyoruz. Butik üretim anlayışımız ile her projeye özel çözümler sunuyor, el işçiliğinde mükemmelliği hedefliyoruz."
                 }
             );
         }
