@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-red-900 via-red-800 to-red-900 text-white">
+    <footer className="bg-dark-900 text-white">
       <div className="section-padding py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -17,8 +17,8 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <img src="/logo.jpg" alt="ONUS" className="h-16 mb-6 object-contain" />
-            <p className="text-red-100 leading-relaxed">
+            <img src="/logo.svg" alt="ONUS" className="h-16 mb-6 brightness-0 invert" />
+            <p className="text-gray-400 leading-relaxed">
               {t('footer.description')}
             </p>
             <div className="flex space-x-4 mt-6">
@@ -26,7 +26,7 @@ const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 bg-white/10 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <FaFacebook />
               </a>
@@ -34,7 +34,7 @@ const Footer = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 bg-white/10 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <FaInstagram />
               </a>
@@ -42,7 +42,7 @@ const Footer = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 bg-white/10 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <FaLinkedin />
               </a>
@@ -50,7 +50,7 @@ const Footer = () => {
                 href="https://wa.me/905555555555"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-10 h-10 bg-white/10 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300"
               >
                 <FaWhatsapp />
               </a>
@@ -67,27 +67,27 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-red-100 hover:text-white transition-colors">
+                <Link to="/" className="text-gray-400 hover:text-primary-400 transition-colors">
                   {t('nav.home')}
                 </Link>
               </li>
               <li>
-                <Link to="/projeler" className="text-red-100 hover:text-white transition-colors">
+                <Link to="/projeler" className="text-gray-400 hover:text-primary-400 transition-colors">
                   {t('nav.projects')}
                 </Link>
               </li>
               <li>
-                <Link to="/hakkimizda" className="text-red-100 hover:text-white transition-colors">
+                <Link to="/hakkimizda" className="text-gray-400 hover:text-primary-400 transition-colors">
                   {t('nav.about')}
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-red-100 hover:text-white transition-colors">
+                <Link to="/blog" className="text-gray-400 hover:text-primary-400 transition-colors">
                   {t('nav.blog')}
                 </Link>
               </li>
               <li>
-                <Link to="/iletisim" className="text-red-100 hover:text-white transition-colors">
+                <Link to="/iletisim" className="text-gray-400 hover:text-primary-400 transition-colors">
                   {t('nav.contact')}
                 </Link>
               </li>
@@ -103,11 +103,11 @@ const Footer = () => {
           >
             <h3 className="text-xl font-bold mb-6">{t('footer.services')}</h3>
             <ul className="space-y-3">
-              <li className="text-red-100">{t('footer.kitchenDesign')}</li>
-              <li className="text-red-100">{t('footer.bathroomDesign')}</li>
-              <li className="text-red-100">{t('footer.customFurniture')}</li>
-              <li className="text-red-100">{t('footer.3dVisualization')}</li>
-              <li className="text-red-100">{t('footer.consulting')}</li>
+              <li className="text-gray-400">{t('footer.kitchenDesign')}</li>
+              <li className="text-gray-400">{t('footer.bathroomDesign')}</li>
+              <li className="text-gray-400">{t('footer.customFurniture')}</li>
+              <li className="text-gray-400">{t('footer.3dVisualization')}</li>
+              <li className="text-gray-400">{t('footer.consulting')}</li>
             </ul>
           </motion.div>
 
@@ -121,20 +121,20 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">{t('footer.contact')}</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <FaMapMarkerAlt className="text-red-300 mt-1 flex-shrink-0" />
-                <span className="text-red-100">
+                <FaMapMarkerAlt className="text-primary-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-400">
                   {t('footer.address')}
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <FaPhone className="text-red-300 flex-shrink-0" />
-                <a href="tel:+905555555555" className="text-red-100 hover:text-white transition-colors">
+                <FaPhone className="text-primary-400 flex-shrink-0" />
+                <a href="tel:+905555555555" className="text-gray-400 hover:text-primary-400 transition-colors">
                   +90 555 555 55 55
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <FaEnvelope className="text-red-300 flex-shrink-0" />
-                <a href="mailto:info@onus.com.tr" className="text-red-100 hover:text-white transition-colors">
+                <FaEnvelope className="text-primary-400 flex-shrink-0" />
+                <a href="mailto:info@onus.com.tr" className="text-gray-400 hover:text-primary-400 transition-colors">
                   info@onus.com.tr
                 </a>
               </li>
@@ -147,14 +147,14 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="section-padding py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-red-100 text-sm">
+            <p className="text-gray-400 text-sm">
               {t('footer.copyright', { year: currentYear })}
             </p>
             <div className="flex space-x-6 text-sm">
-              <Link to="/gizlilik" className="text-red-100 hover:text-white transition-colors">
+              <Link to="/gizlilik" className="text-gray-400 hover:text-primary-400 transition-colors">
                 {t('footer.privacyPolicy')}
               </Link>
-              <Link to="/kullanim" className="text-red-100 hover:text-white transition-colors">
+              <Link to="/kullanim" className="text-gray-400 hover:text-primary-400 transition-colors">
                 {t('footer.termsOfUse')}
               </Link>
             </div>

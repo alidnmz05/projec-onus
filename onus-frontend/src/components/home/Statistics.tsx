@@ -17,33 +17,33 @@ const Statistics = () => {
       value: 500,
       suffix: '+',
       label: t('statistics.completedProjects'),
-      color: 'from-red-500 to-red-600',
+      color: 'from-blue-500 to-blue-600',
     },
     {
       icon: FaUsers,
       value: 350,
       suffix: '+',
       label: t('statistics.happyClients'),
-      color: 'from-red-400 to-red-500',
+      color: 'from-green-500 to-green-600',
     },
     {
       icon: FaAward,
       value: 15,
       suffix: '+',
       label: t('statistics.awards'),
-      color: 'from-orange-500 to-red-500',
+      color: 'from-yellow-500 to-yellow-600',
     },
     {
       icon: FaSmile,
       value: 98,
       suffix: '%',
       label: t('statistics.satisfaction'),
-      color: 'from-red-600 to-red-700',
+      color: 'from-red-500 to-red-600',
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-red-950 via-red-900 to-red-950 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -61,7 +61,7 @@ const Statistics = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
             {t('statistics.title')}
           </h2>
-          <p className="text-lg text-red-100 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             {t('statistics.subtitle')}
           </p>
         </motion.div>
@@ -76,7 +76,7 @@ const Statistics = () => {
               transition={{ delay: index * 0.1 }}
               className="text-center"
             >
-              <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mb-6 mx-auto transform hover:scale-110 hover:rotate-6 transition-all duration-300 shadow-lg`}>
+              <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mb-6 mx-auto transform hover:scale-110 hover:rotate-6 transition-all duration-300`}>
                 <stat.icon className="text-white text-3xl" />
               </div>
               <div className="text-5xl md:text-6xl font-bold text-white mb-2">
@@ -89,7 +89,7 @@ const Statistics = () => {
                   />
                 )}
               </div>
-              <p className="text-red-100 text-lg font-medium">
+              <p className="text-gray-400 text-lg font-medium">
                 {stat.label}
               </p>
             </motion.div>

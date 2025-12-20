@@ -11,7 +11,7 @@ const Loader = () => {
           className="mb-8"
         >
           <img 
-            src="/logo.jpg" 
+            src="/logo.svg" 
             alt="ONUS Logo" 
             className="w-32 h-32 mx-auto object-contain"
           />

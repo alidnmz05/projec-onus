@@ -31,10 +31,9 @@ builder.Services.AddCors(options =>
                 "http://localhost:3000",
                 "http://localhost:3001", 
                 "http://localhost:5173",
-                "http://onus.com.tr",
-                "https://onus.com.tr",
-                "http://www.onus.com.tr",
-                "https://www.onus.com.tr"
+                "http://178.208.187.213:3000",
+                "http://178.208.187.213:3001",
+                "http://178.208.187.213:3100"
             )
             .AllowAnyMethod()
             .AllowAnyHeader()

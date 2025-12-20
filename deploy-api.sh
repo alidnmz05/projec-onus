@@ -17,7 +17,7 @@ NC='\033[0m' # No Color
 PROJECT_DIR="/var/www/onus-project"
 API_DIR="$PROJECT_DIR/Onus.API/Onus.API"
 PUBLISH_DIR="/var/www/onus-api"
-PORT=${PORT:-5001}  # Environment variable veya default 5001
+PORT=${PORT:-5177}  # Environment variable veya default 5177
 SERVICE_NAME="onus-api"
 
 echo -e "${YELLOW}📦 Proje dizini: $API_DIR${NC}"

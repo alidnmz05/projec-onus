@@ -44,7 +44,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center">
             <motion.img
               whileHover={{ scale: 1.05 }}
-              src="/logo.jpg"
+              src="/logo.svg"
               alt="ONUS"
               className="h-10 sm:h-12 md:h-14 lg:h-16 object-contain"
             />
@@ -150,11 +150,10 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
-              <div className="px-4 py-3 bg-gray-50">
-                <div className="text-xs font-medium text-gray-500 mb-2 px-2">{t('nav.language') || 'Dil Seçimi'}</div>
+              <div className="px-6 py-3">
                 <LanguageSwitcher />
               </div>
-              <div className="flex items-center justify-center space-x-6 py-4 border-t">
+              <div className="flex items-center justify-center space-x-6 mt-4 pt-4 border-t">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-dark-600 hover:text-primary-600">
                   <FaFacebook size={24} />
                 </a>
