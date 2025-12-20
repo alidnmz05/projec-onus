@@ -5,6 +5,17 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    host: true, // Mobil cihazlardan erişim için
+    host: true,
+  },
+  preview: {
+    port: 3000,
+    host: true,
+    strictPort: false,
+    allowedHosts: [
+      'localhost',
+      '178.208.187.213',
+      'onus.com.tr',
+      'www.onus.com.tr',
+    ],
   },
 })

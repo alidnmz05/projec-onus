@@ -84,32 +84,12 @@ echo -e "${YELLOW}Production build oluşturuluyor...${NC}"
 npm run build
 echo -e "${GREEN}✓ Build tamamlandı${NC}"
 
-# Port için .env dosyası oluştur
-echo -e "${YELLOW}.env dosyası oluşturuluyor...${NC}"
-cat > .env.production << EOF
-PORT=${FRONTEND_PORT}
-VITE_API_URL=https://onus.com.tr/api
-EOF
-echo -e "${GREEN}✓ .env.production oluşturuldu${NC}"
-
-# PM2'de çalışan uygulamayı kontrol et
-echo -e "${YELLOW}PM2 uygulaması kontrol ediliyor...${NC}"
-if pm2 describe $APP_NAME &> /dev/null; then
-    echo -e "${YELLOW}Mevcut uygulama bulundu, yeniden başlatılıyor...${NC}"
-    pm2 delete $APP_NAME
-fi
-
-# PM2 ile başlat
-echo -e "${YELLOW}PM2 ile uygulama başlatılıyor...${NC}"
-pm2 start npm --name "$APP_NAME" -- run preview -- --port $FRONTEND_PORT --host 0.0.0.0
-
-# PM2'yi kaydet
-echo -e "${YELLOW}PM2 yapılandırması kaydediliyor...${NC}"
-pm2 save
-
-# PM2 startup
-echo -e "${YELLOW}PM2 startup yapılandırması...${NC}"
-pm2 startup || true
+# Build dosyalarını Nginx dizinine kopyala
+echo -e "${YELLOW}Build dosyaları Nginx'e kopyalanıyor...${NC}"
+sudo mkdir -p /var/www/onus-frontend
+sudo cp -r dist/* /var/www/onus-frontend/
+sudo chown -R www-data:www-data /var/www/onus-frontend
+echo -e "${GREEN}✓ Build dosyaları /var/www/onus-frontend dizinine kopyalandı${NC}"
 
 # Durum kontrolü
 echo ""
@@ -118,17 +98,13 @@ echo -e "${GREEN}   ✓ Frontend Deployment Tamamlandı!${NC}"
 echo -e "${GREEN}========================================${NC}"
 echo ""
 echo -e "${BLUE}Uygulama Bilgileri:${NC}"
-echo -e "  URL: ${GREEN}http://178.208.187.213:${FRONTEND_PORT}${NC}"
-echo -e "  Uygulama: ${GREEN}${APP_NAME}${NC}"
-echo -e "  Durum: ${GREEN}$(pm2 describe $APP_NAME | grep 'status' | head -1 || echo 'Çalışıyor')${NC}"
+echo -e "  URL: ${GREEN}https://onus.com.tr${NC}"
+echo -e "  Build Dizini: ${GREEN}/var/www/onus-frontend${NC}"
+echo -e "  Durum: ${GREEN}Nginx üzerinden sunuluyor${NC}"
 echo ""
-echo -e "${BLUE}Yönetim Komutları:${NC}"
-echo -e "  pm2 list                  - Uygulamaları listele"
-echo -e "  pm2 logs $APP_NAME        - Logları görüntüle"
-echo -e "  pm2 restart $APP_NAME     - Yeniden başlat"
-echo -e "  pm2 stop $APP_NAME        - Durdur"
-echo -e "  pm2 delete $APP_NAME      - Kaldır"
-echo ""
-echo -e "${YELLOW}Not: Güvenlik duvarınızda ${FRONTEND_PORT} portunu açmayı unutmayın:${NC}"
-echo -e "  sudo ufw allow ${FRONTEND_PORT}/tcp"
+echo -e "${BLUE}Nginx Komutları:${NC}"
+echo -e "  sudo systemctl status nginx   - Nginx durumu"
+echo -e "  sudo systemctl restart nginx  - Nginx yeniden başlat"
+echo -e "  sudo tail -f /var/log/nginx/onus-access.log   - Erişim logları"
+echo -e "  sudo tail -f /var/log/nginx/onus-error.log    - Hata logları"
 echo ""
