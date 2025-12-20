@@ -14,14 +14,11 @@ const AdminProjects = () => {
 
   const fetchProjects = async () => {
     try {
-      setIsLoading(true);
       const response = await axios.get(`${API_URL}/projects`);
       setProjects(response.data);
     } catch (error) {
       console.error('Error fetching projects:', error);
       alert('Projeler yüklenirken hata oluştu');
-    } finally {
-      setIsLoading(false);
     }
   };
 

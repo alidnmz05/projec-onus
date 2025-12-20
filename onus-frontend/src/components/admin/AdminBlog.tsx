@@ -14,14 +14,11 @@ const AdminBlog = () => {
 
   const fetchPosts = async () => {
     try {
-      setIsLoading(true);
       const response = await axios.get(`${API_URL}/blog`);
       setPosts(response.data);
     } catch (error) {
       console.error('Error fetching posts:', error);
       alert('Blog yazıları yüklenirken hata oluştu');
-    } finally {
-      setIsLoading(false);
     }
   };
 

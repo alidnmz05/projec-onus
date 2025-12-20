@@ -23,15 +23,12 @@ const AdminSettings = () => {
 
   const fetchSettings = async () => {
     try {
-      setIsLoading(true);
       const response = await axios.get(`${API_URL}/settings`);
-      if (response.data && response.data.length > 0) {
-        setSettings(response.data[0]);
+      if (response.data) {
+        setSettings(response.data);
       }
     } catch (error) {
       console.error('Error fetching settings:', error);
-    } finally {
-      setIsLoading(false);
     }
   };
 
