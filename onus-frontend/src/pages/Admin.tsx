@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import AdminLogin from '../components/admin/AdminLogin';
 import AdminLayout from '../components/admin/AdminLayout';
-import AdminDashboard from '../components/admin/AdminDashboard';
 import AdminHeroSlides from '../components/admin/AdminHeroSlides';
 import AdminProjects from '../components/admin/AdminProjects';
 import AdminBlog from '../components/admin/AdminBlog';
@@ -26,7 +25,7 @@ const Admin = () => {
     if (success) {
       localStorage.setItem('adminToken', 'authenticated');
       setIsAuthenticated(true);
-      navigate('/admin/dashboard');
+      navigate('/admin/hero-slides');
     }
   };
 
@@ -43,8 +42,7 @@ const Admin = () => {
   return (
     <AdminLayout onLogout={handleLogout}>
       <Routes>
-        <Route path="/" element={<Navigate to="/admin/dashboard" replace />} />
-        <Route path="/dashboard" element={<AdminDashboard />} />
+        <Route path="/" element={<Navigate to="/admin/hero-slides" replace />} />
         <Route path="/hero-slides" element={<AdminHeroSlides />} />
         <Route path="/statistics" element={<AdminStatistics />} />
         <Route path="/projects" element={<AdminProjects />} />

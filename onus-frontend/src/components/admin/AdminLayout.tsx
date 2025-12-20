@@ -1,7 +1,6 @@
 import { ReactNode, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  FaHome, 
   FaImage, 
   FaChartBar,
   FaProjectDiagram, 
@@ -25,7 +24,6 @@ const AdminLayout = ({ children, onLogout }: AdminLayoutProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const menuItems = [
-    { name: 'Dashboard', path: '/admin/dashboard', icon: FaHome },
     { name: 'Ana Sayfa Slaytları', path: '/admin/hero-slides', icon: FaImage },
     { name: 'İstatistikler', path: '/admin/statistics', icon: FaChartBar },
     { name: 'Projeler', path: '/admin/projects', icon: FaProjectDiagram },
