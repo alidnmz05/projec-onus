@@ -10,7 +10,8 @@ import {
   FaCog, 
   FaSignOutAlt,
   FaBars,
-  FaTimes
+  FaTimes,
+  FaInfoCircle
 } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -30,6 +31,7 @@ const AdminLayout = ({ children, onLogout }: AdminLayoutProps) => {
     { name: 'Yorumlar', path: '/admin/testimonials', icon: FaComments },
     { name: 'Blog', path: '/admin/blog', icon: FaBlog },
     { name: 'Referanslar', path: '/admin/references', icon: FaHandshake },
+    { name: 'Hakkımızda', path: '/admin/about', icon: FaInfoCircle },
     { name: 'Ayarlar', path: '/admin/settings', icon: FaCog },
   ];
 

@@ -1,7 +1,43 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaUsers, FaLightbulb, FaHeart } from 'react-icons/fa';
+import axios from 'axios';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 const About = () => {
+  const [contents, setContents] = useState<any>({
+    title: 'Hakkımızda',
+    mainText: 'ONUS Mutfak & Banyo olarak, modern tasarım ve fonksiyonelliğin buluştuğu, yaşam alanlarınıza şıklık ve konfor getiren özel çözümler sunuyoruz.',
+    slogan: 'Doğanın Çırağı, Ahşabın Ustası',
+    description: 'Yılların deneyimi ve sektördeki uzmanlığımızla, hayalinizdeki yaşam alanlarını gerçeğe dönüştürüyoruz. Kaliteli malzeme, profesyonel ekip ve mükemmel işçilik garantisi sunuyoruz.',
+    experienceYears: '15+'
+  });
+
+  useEffect(() => {
+    fetchContents();
+  }, []);
+
+  const fetchContents = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/pagecontents?page=about`);
+      if (response.data && response.data.length > 0) {
+        const data = response.data;
+        const newContents: any = {};
+        
+        data.forEach((item: any) => {
+          if (item.order === 1) newContents.mainText = item.content;
+          if (item.order === 2) newContents.slogan = item.content;
+          if (item.order === 3) newContents.description = item.content;
+          if (item.order === 4) newContents.experienceYears = item.content;
+        });
+        
+        setContents({ ...contents, ...newContents });
+      }
+    } catch (error) {
+      console.error('Error fetching about contents:', error);
+    }
+  };
   const values = [
     {
       icon: FaCheckCircle,
@@ -38,17 +74,14 @@ const About = () => {
               Hakkımızda
             </h1>
             <p className="text-xl text-dark-600 leading-relaxed mb-6">
-              ONUS Mutfak & Banyo olarak, modern tasarım ve fonksiyonelliğin buluştuğu, 
-              yaşam alanlarınıza şıklık ve konfor getiren özel çözümler sunuyoruz.
+              {contents.mainText}
             </p>
             <p className="text-lg text-dark-600 leading-relaxed mb-6">
-              "Doğanın Çırağı, Ahşabın Ustası" sloganımızla doğal malzemeleri en iyi şekilde 
+              "{contents.slogan}" sloganımızla doğal malzemeleri en iyi şekilde 
               işleyerek, size özel tasarımlar oluşturuyoruz. Her proje bizim için bir sanat eseridir.
             </p>
             <p className="text-lg text-dark-600 leading-relaxed">
-              Yılların deneyimi ve sektördeki uzmanlığımızla, hayalinizdeki yaşam alanlarını 
-              gerçeğe dönüştürüyoruz. Kaliteli malzeme, profesyonel ekip ve mükemmel işçilik 
-              garantisi sunuyoruz.
+              {contents.description}
             </p>
           </motion.div>
 
@@ -63,7 +96,7 @@ const About = () => {
               className="rounded-2xl shadow-2xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-primary-600 text-white p-8 rounded-xl shadow-xl">
-              <div className="text-4xl font-bold mb-2">15+</div>
+              <div className="text-4xl font-bold mb-2">{contents.experienceYears}</div>
               <div className="text-lg">Yıllık Deneyim</div>
             </div>
           </motion.div>

@@ -9,6 +9,7 @@ import AdminReferences from '../components/admin/AdminReferences';
 import AdminSettings from '../components/admin/AdminSettings';
 import AdminStatistics from '../components/admin/AdminStatistics';
 import AdminTestimonials from '../components/admin/AdminTestimonials';
+import AdminAbout from '../components/admin/AdminAbout';
 
 const Admin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -49,6 +50,7 @@ const Admin = () => {
         <Route path="/testimonials" element={<AdminTestimonials />} />
         <Route path="/blog" element={<AdminBlog />} />
         <Route path="/references" element={<AdminReferences />} />
+        <Route path="/about" element={<AdminAbout />} />
         <Route path="/settings" element={<AdminSettings />} />
       </Routes>
     </AdminLayout>
